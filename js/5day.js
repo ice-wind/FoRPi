@@ -221,7 +221,7 @@ Highcharts.setOptions({
 							return "";							
 						}
 						else{
-							return '<span>'+weather_icon+'</span><img src="img/'+this.point.w_icon+'.png"'+'width="42"><img>&nbsp;';
+							return '<img src="img/'+this.point.w_icon+'.png"'+'width="42"><img>&nbsp;';
 						}
 					}
 				},
