@@ -1,0 +1,104 @@
+<html>
+<head>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+	<title>Get_forecast_data</title>
+	<link rel="stylesheet" type="text/css" href="css/5day.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://code.highcharts.com/highcharts.js"></script>
+	<script src="http://code.highcharts.com/highcharts-more.js"></script>
+	<script src="http://code.highcharts.com/modules/exporting.js"></script>
+	<script src="http://code.highcharts.com/modules/solid-gauge.js"></script>
+	<script type="text/javascript" src="js/init.js"></script>
+	<script type="text/javascript" src="js/5day.js"></script>
+	<script type="text/javascript" src="js/16day.js"></script>
+	<script type="text/javascript" src="js/RPi.js"></script>
+	<script src="js/toggleClass.js"></script>
+	<script type="text/javascript" src="js/search.js"></script>
+	
+</head>
+<body>
+Start
+	<a href="#" class="scrollToTop"></a>
+	
+	<div class="main">
+		<div class="row_base">
+			<div class="left_menu">	
+				<div class="left_top ripplelink">left menu</div>
+				<ul id="accordion">
+					<li>
+						<input type="radio" name="accordion" value="1" id="first" >
+						<label for="first" class="ripplelink"><img src="img/RPi_home.ico"style="width:60;height:45;padding-left:5pxl"> Home sensors</label>
+					</li>
+					<li>
+						<input type="radio" name="accordion" value="2" id="second" checked>
+						<label for="second" class="ripplelink">5</label>
+					</li>
+					<li>
+						<input type="radio" name="accordion" value="3" id="third">
+						<label for="third" class="ripplelink">16</label>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="right_content">
+				<div class="right_top">
+					<div class="menu_icon">
+							<div class ="menu_wrapper">
+								<hr class="menu_line line_top" />
+								<hr class="menu_line line_center" />
+								<hr class="menu_line line_bottom" />
+							</div>
+					</div>
+					<div class="right_search ">
+						<form autocomplete="on" id="search" >
+							<input class="search" type="search" size="30"  onkeyup="handle_pressKeyboard(event);" data-search="" placeholder=" Search..." >
+							<div id="livesearch"></div>
+							<div class="result"></div>
+						</form>
+					</div>
+					<div class="blank"></div>
+					<div class="language"><img src="img/EN.png" style="width:20;height:15;">EN</div>
+					<div class="sideMenu_button"><div class="side_menu_button_content"></div></div>
+				</div>
+				<div class="main_row_container">
+					<div class="main_graphs_section_column">
+						<div class="gadgets_set">
+							<div id='1gauge' class="dash_components gadget1"></div>
+							<div id='2gauge' class="dash_components gadget2"></div>
+							<div id='3gauge' class="dash_components gadget3"></div>
+							<div id='4gauge' class="dash_components gadget4"></div>
+						</div>
+						<div class= "graphs_set">
+						<div  id='container' class = "dash_components graphs graph1"> 
+						</div>
+						<div id='graph_windSpeed' class = "dash_components graphs graph2"> 
+						</div>
+						<div id='graph_pressure' class = "dash_components graphs graph3"> 
+						</div>
+						<div id='graph_sealevel' class = "dash_components graphs graph4 "> 
+						</div>
+						</div>
+					</div>
+					<div class="side_menu_area">
+						<div ID="time"></div>
+						<div ID="date_day"></div>
+						<div ID="day"></div>
+						<div ID="wrap_year">
+							<div ID="month"></div>
+							<div ID="year"></div>
+						</div>
+						<div ID="today" class="sideForecast"></div>
+						<div ID="firstDay" class="sideForecast"></div>
+						<div ID="secondDay" class="sideForecast"></div>
+						<div ID="thirdDay" class="sideForecast"></div>
+						<div ID="fourthDay" class="sideForecast"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+</body>
+</html>
