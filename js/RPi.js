@@ -7,19 +7,19 @@ var main_optionsRPi = {
 					title: {
 						text: 'RPi'
 					},
-					yAxis: [{//first axis
+					yAxis: [{
 						gridLineWidth:1,
 						minorTickInterval: 'auto',
 						title: {
-							text: 'Temp In',
+							text: 'Temperature',
 							style: {
-								color: 'green'
+								color: '#8c8c8c'
 								}
 						},
 						labels:{
 							format: '{value} °C',
 							style:{
-								color:'green'
+								color:'#8c8c8c'
 							}
 						},
 						opposite: false,
@@ -27,11 +27,11 @@ var main_optionsRPi = {
 							
 						}]
 						
-					},{//Sec yAxis
+					},{
 						gridLineWidth:1,
 						TickInterval: 'auto',
 						title:{
-							text: 'Hum',
+							text: 'Humidity',
 							style: {
 								color: '#00A3CC'
 							}
@@ -43,22 +43,6 @@ var main_optionsRPi = {
 								}
 						},
 						opposite: true,
-					},{//Third
-						gridLineWidth: 1,
-						TickInterval: 'auto',
-						title:{
-								text: 'Temp Out',
-								style:{
-									color: '#6B4C9A'
-									}
-								},
-								labels:{
-									format: '{value} °C',
-									style:{
-										color: '#6B4C9A'
-										}	
-								},
-						opposite: true
 					}],
 					series: [{
 						name: 'Temp In',
@@ -68,7 +52,6 @@ var main_optionsRPi = {
 								enabled:true,
 								useHTML:true,
 								formatter:function(){
-									// return '<span>'+this.y+'</span><br/>'+this.series+'<img src="'+this.key+'" />';
 									return this.point.z;
 								}
 							},
@@ -77,6 +60,15 @@ var main_optionsRPi = {
 						tooltip:{
 							valueSuffix: '°C',
 						}
+					},{
+						name: 'Temp Out',
+						type: 'spline',
+						yAxis:0,
+						color:'#6B4C9A',
+						tooltip:{
+							valueSuffix:'Pa'
+						},
+						negativeColor: '#0088FF',
 					},{
 						name:'Hum',
 						type: 'areaspline',
@@ -95,15 +87,6 @@ var main_optionsRPi = {
 								}
 							}
 						}
-					},{
-						name: 'Temp Out',
-						type: 'spline',
-						yAxis:2,
-						color:'#6B4C9A',
-						tooltip:{
-							valueSuffix:'Pa'
-						},
-						negativeColor: '#0088FF',
 					}]
 }
 //---------------------------------2Chart Press ----------------------------------------------				
@@ -397,7 +380,7 @@ function createRPiCharts(){
 				var gauge3 = new Highcharts.Chart(gaugeOptions_humidity);
 				gaugeOptions_pressure = jQuery.extend(true,[],defaultGaugeOptions,gaugeOptions_pressureRPi);
 				var gauge4 = new Highcharts.Chart(gaugeOptions_pressure);
-
+				console.log(main_optionsRPi);
 				var chart_temp_hum = new Highcharts.Chart(main_optionsRPi);
 				var chart_pressure = new Highcharts.Chart(options_pressureRPi);
 				var chart_sealevel = new Highcharts.Chart(options_sealevelRPi);
@@ -453,6 +436,8 @@ function fillRPiData(data,callback){
 	RPiData.variableFree();
 	RPiData.fillVariables(data);
 
+	
+	console.log(RPiData.getTemperatureIn());
 	main_optionsRPi.series[0].data=RPiData.getTemperatureIn();
 	main_optionsRPi.series[1].data=RPiData.getHumidity();
 	main_optionsRPi.series[2].data=RPiData.getTemperatureOut();

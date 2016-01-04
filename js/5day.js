@@ -1,7 +1,7 @@
 //----------------------------------- global CHART options--------------------------------------------
 Highcharts.setOptions({
 	global: {
-		timezoneOffset: 6 * 60
+		timezoneOffset: -1 * 60
 	},
 	xAxis: {
 			name: 'time',

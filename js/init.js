@@ -391,10 +391,11 @@ var selectedButton=2;
 //---------------------------------------------------------
 //---------------------------side menu anim------------------	
 	$(".sideMenu_button").hover(function(){
-		$(".side_menu_button_content").addClass("side_menu_animation");
+		$(".gear_icon").addClass("gear_animation");
 	},function(){
-		$(".side_menu_button_content").removeClass("side_menu_animation");
+		$(".gear_icon").removeClass("gear_animation");
 	});
+	
 //--------------------------------------------------------------
 	/*
 	var side_menu_selected=false;
