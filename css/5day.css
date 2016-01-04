@@ -2,9 +2,6 @@
 	font-family:'Tienne';
 	src:url('../fonts/Tienne/Tienne-Bold.ttf') format('truetype');
 }
-.leftIcons:hover{
-	color:white;
-}
 .main {
   display: -webkit-flex;
   display: -o-flex;
@@ -376,7 +373,7 @@
 	-webkit-flex-direction:column ;
 	-o-flex-direction:column ;
 	flex-direction:column ;
-	min-width:160px;
+	min-width:190px;
 	background:#e6e6e6;
 	-webkit-box-shadow: 10px 0px 9px -9px rgba(137, 137, 137, 0.9) inset;
 	box-shadow: 10px 0px 9px -9px rgba(137, 137, 137, 0.9) inset;

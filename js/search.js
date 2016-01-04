@@ -176,11 +176,11 @@ function updateSideBar(data){
 	console.log(nextDay);
 	
 
-	todayHtmlElement.innerHTML = "Now: " +data.getTemperatureNow()+"ºC " + '<span style="align:center"> <img src="img/'+data.getWeather_icon()[0].y+'.png" title="" alt=""  height="25" width="22" align="center" style="margin:auto 0; float:right"></span>';
-	firsDayHtmlElement.innerHTML = getDayString(dateNow.getDay()+1)  +data.getTemperature()[nextDay+8].y+"ºC  "+ '<span style="align:center"> <img src="img/'+data.getWeather_icon()[nextDay+8].y+'.png" title="" alt=""  height="25" width="22" align="center" style="margin:auto 0; float:right"></span>';
-	secondDayHtmlElement.innerHTML = getDayString(dateNow.getDay()+2) +data.getTemperature()[nextDay+16].y+"ºC  "+  '<span style="align:center"> <img src="img/'+data.getWeather_icon()[nextDay+16].y+'.png" title="" alt=""  height="25" width="22" align="center" style="margin:auto 0; float:right"></span>';
-	thirdDayHtmlElement.innerHTML = getDayString(dateNow.getDay()+3) +data.getTemperature()[nextDay+24].y+"ºC  "+  '<span style="align:center"> <img src="img/'+data.getWeather_icon()[nextDay+24].y+'.png" title="" alt=""  height="25" width="22" align="center" style="margin:auto 0; float:right"></span>';
-	fourthDayHtmlElement.innerHTML = getDayString(dateNow.getDay()+4) + data.getTemperature()[nextDay+24].y+"ºC  "+ '<span style="align:center"> <img src="img/'+data.getWeather_icon()[nextDay+32].y+'.png" title="" alt=""  height="25" width="22" align="center" style="margin:auto 0; float:right"></span>';
+	todayHtmlElement.innerHTML = "Now: "+'<span style="float:right"> ' +data.getTemperatureNow()+"ºC " +  '<img src="img/'+data.getWeather_icon()[0].y+'.png" title="" alt=""  height="25" width="22" align="center" style="margin:auto 0 auto 10;	 float:right"></span>';
+	firsDayHtmlElement.innerHTML = getDayString(dateNow.getDay()+1)  +'<span style="float:right"> '+data.getTemperature()[nextDay+8].y+"ºC  "+ ' <img src="img/'+data.getWeather_icon()[nextDay+8].y+'.png" title="" alt=""  height="25" width="22" align="center" style="margin:auto 0 auto 10; float:right"></span>';
+	secondDayHtmlElement.innerHTML = getDayString(dateNow.getDay()+2) +'<span style="float:right"> '+data.getTemperature()[nextDay+16].y+"ºC  "+  ' <img src="img/'+data.getWeather_icon()[nextDay+16].y+'.png" title="" alt=""  height="25" width="22" align="center" style="margin:auto 0 auto 10; float:right"></span>';
+	thirdDayHtmlElement.innerHTML = getDayString(dateNow.getDay()+3) +'<span style="float:right"> '+data.getTemperature()[nextDay+24].y+"ºC  "+  '<img src="img/'+data.getWeather_icon()[nextDay+24].y+'.png" title="" alt=""  height="25" width="22" align="center" style="margin:auto 0 auto 10; float:right"></span>';
+	fourthDayHtmlElement.innerHTML = getDayString(dateNow.getDay()+4) +'<span style="float:right"> '+ data.getTemperature()[nextDay+24].y+"ºC "+ '<img src="img/'+data.getWeather_icon()[nextDay+32].y+'.png" title="" alt=""  height="25" width="22" align="center" style="margin:auto 0 auto 10; float:right"></span>';
 }
 
 function update16DayCharts(response){

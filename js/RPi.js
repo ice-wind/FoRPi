@@ -5,7 +5,7 @@ var main_optionsRPi = {
 						zoomType:'x'
 					},
 					title: {
-						text: 'RPi'
+						text: 'SENSORS '
 					},
 					yAxis: [{
 						gridLineWidth:1,
@@ -66,7 +66,7 @@ var main_optionsRPi = {
 						yAxis:0,
 						color:'#6B4C9A',
 						tooltip:{
-							valueSuffix:'Pa'
+							valueSuffix:'°C'
 						},
 						negativeColor: '#0088FF',
 					},{
@@ -439,8 +439,8 @@ function fillRPiData(data,callback){
 	
 	console.log(RPiData.getTemperatureIn());
 	main_optionsRPi.series[0].data=RPiData.getTemperatureIn();
-	main_optionsRPi.series[1].data=RPiData.getHumidity();
-	main_optionsRPi.series[2].data=RPiData.getTemperatureOut();
+	main_optionsRPi.series[1].data=RPiData.getTemperatureOut();
+	main_optionsRPi.series[2].data=RPiData.getHumidity();
 	
 	options_pressureRPi.series[0].data=RPiData.getPressure();
 	options_pressureRPi.series[1].data=RPiData.getGrnd_level();
