@@ -15,13 +15,13 @@ Highcharts.setOptions({
 			formatter: function(){
 				var picture_url = '';
 				if(this.series.name == "Temp In"){
-					picture_url = '<img src="img/Temp.png" title="" alt="" border="1" height="25" width="22" align="center">';
+					picture_url = '<img src="img/TemperatureIn.png" title="" alt="" border="0" height="25" width="25" align="center">';
 				}else
 				if(this.series.name == "Hum"){
-					picture_url = '<img src="img/Hum.png" title="" alt="" border="1" height="25" width="22" align="center">';
+					picture_url = '<img src="img/Humidity.png" title="" alt="" border="0" height="25" width="25" align="center">';
 				}else
 				if(this.series.name == "Temp Out"){
-					picture_url = '<img src="img/Press.png" title="" alt="" border="1" height="25" width="22" align="center">';
+					picture_url = '<img src="img/TemperatureOut.png" title="" alt="" border="0" height="25" width="25" align="center">';
 					}
 				else
 					{
@@ -689,7 +689,7 @@ var defaultGaugeOptions = {
 								data:[0],
 								dataLabels: {
 									useHTML: true,
-									format: '<img src="img/Hum.png" width="50px" align="center"><div style="text-align:center"><span style="font-size:20px;color:#009933">{y}</span></div>'
+									format: '<img src="img/Temperature.png" width="25px" align="center"><div style="text-align:center"><span style="font-size:20px;color:#009933">{y}</span></div>'
 								}
 							}],
 							credits: {

@@ -2,6 +2,9 @@
 	font-family:'Tienne';
 	src:url('../fonts/Tienne/Tienne-Bold.ttf') format('truetype');
 }
+.leftIcons:hover{
+	color:white;
+}
 .main {
   display: -webkit-flex;
   display: flex;
