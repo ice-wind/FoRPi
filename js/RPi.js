@@ -24,7 +24,6 @@ var main_optionsRPi = {
 						},
 						opposite: false,
 						plotBands:[{
-							
 						}]
 						
 					},{
@@ -49,11 +48,11 @@ var main_optionsRPi = {
 						type: 'spline',
 						yAxis: 0,
 						dataLabels:{
-								enabled:true,
-								useHTML:true,
-								formatter:function(){
-									return this.point.z;
-								}
+								//enabled:true,
+								//useHTML:true,
+								//formatter:function(){
+								//	return this.point.z;
+								//}
 							},
 						color: '#3E9651',
 						negativeColor: '#0088FF',
@@ -136,10 +135,10 @@ var options_pressureRPi = {
 						name: 'Pressure',
 						type: 'spline',
 						yAxis: 0,
-						dataLabels:{
+						/*dataLabels:{
 								enabled:true,
 								useHTML:true
-							},
+							},*/
 						color: '#6C3738',
 						tooltip:{
 							valueSuffix: 'Pa',
@@ -188,10 +187,10 @@ var options_sealevelRPi = {
 						name: 'Sea_level',
 						type: 'spline',
 						yAxis: 0,
-						dataLabels:{
+						/*dataLabels:{
 								enabled:true,
 								useHTML:true
-							},
+							},*/
 						color: '#EA8D11',
 						tooltip:{
 							valueSuffix: 'Pa',
