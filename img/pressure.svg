@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.2" baseProfile="tiny" id="Vrstva_1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="161px" height="268px"
+	 viewBox="0 0 161 268" xml:space="preserve">
+<g>
+	<line fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" x1="82" y1="235" x2="82" y2="239"/>
+	<g>
+		<polygon points="62.555,233 82.5,267.539 102.443,233 		"/>
+	</g>
+</g>
+<circle fill="none" stroke="#000000" stroke-width="5" stroke-miterlimit="10" cx="82.297" cy="82.486" r="73.649"/>
+<circle fill="none" stroke="#000000" stroke-width="5" stroke-miterlimit="10" cx="82.297" cy="103.486" r="11.433"/>
+<path fill="none" stroke="#000000" stroke-width="5" stroke-miterlimit="10" d="M147.486,79.5
+	c-5.399-33.506-32.521-59.229-65.189-59.229S22.508,45.994,17.109,79.5H147.486z"/>
+<polygon points="84.818,130.366 63.144,32.088 93.512,128.037 "/>
+<line fill="none" stroke="#000000" stroke-width="5" stroke-miterlimit="10" x1="82.297" y1="20.271" x2="82.5" y2="32.088"/>
+<line fill="none" stroke="#000000" stroke-width="5" stroke-miterlimit="10" x1="43.46" y1="35.773" x2="51.337" y2="44.585"/>
+<line fill="none" stroke="#000000" stroke-width="5" stroke-miterlimit="10" x1="113.46" y1="44.585" x2="121.337" y2="35.773"/>
+<line fill="none" stroke="#000000" stroke-width="5" stroke-miterlimit="10" x1="23.98" y1="61.82" x2="34.817" y2="66.538"/>
+<line fill="none" stroke="#000000" stroke-width="5" stroke-miterlimit="10" x1="129.98" y1="66.538" x2="140.816" y2="61.819"/>
+<path fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" d="M76,156v81.5c0,3.59,2.91,6.5,6.5,6.5
+	s6.5-2.91,6.5-6.5V156H76z"/>
+</svg>
