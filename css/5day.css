@@ -536,6 +536,15 @@ table{
 	font-size: 18px;
 	
 }
+.gaugeIcons{
+	display:block;
+	text-align:center;
+}
+.wrapImage{
+	position:relative;
+}
+
+
 
 /*-----------------END highchart-----------------*/
 @media all and (max-width: 300px) {

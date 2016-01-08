@@ -14,14 +14,26 @@ Highcharts.setOptions({
 			useHTML: true,
 			formatter: function(){
 				var picture_url = '';
-				if(this.series.name == "Temp In"){
-					picture_url = '<img src="img/TemperatureIn.png" title="" alt="" border="0" height="25" width="25" align="center">';
+				if(this.series.name == "Temp_In"){
+					picture_url = '<img src="img/TemperatureIn.png" title="Temp" alt="TemperatureIn" border="0" height="25" width="25" align="right">';
 				}else
 				if(this.series.name == "Hum"){
-					picture_url = '<img src="img/Humidity.png" title="" alt="" border="0" height="25" width="25" align="center">';
+					picture_url = '<img src="img/Humidity.svg" title="Humidity" alt="Humidity" border="0" height="25" width="25" align="right">';
 				}else
-				if(this.series.name == "Temp Out"){
-					picture_url = '<img src="img/TemperatureOut.png" title="" alt="" border="0" height="25" width="25" align="center">';
+				if(this.series.name == "Temp_Out"){
+					picture_url = '<img src="img/TemperatureOut.png" title="TemperatureOut" alt="TemperatureOut" border="0" height="25" width="25" align="right">';
+				}else
+				if(this.series.name == "WindSpeed"){
+					picture_url = '<img src="img/905.png" title="Wind" alt="Wind" border="0" height="25" align="right">';
+				}else
+				if(this.series.name == "Pressure"){
+					picture_url = '<img src="img/Pressure.svg" title="Pressure" alt="Pressure" border="0" height="25" width="25" align="right">';
+				}else
+				if(this.series.name == "Sea_level"){
+					picture_url = '<img src="img/Sea_level.svg" title="Pressure" alt="Pressure" border="0" height="25" width="25" align="right">';
+				}else
+				if(this.series.name == "Altitude"){
+					picture_url = '<img src="img/Altitude.svg" title="Altitude" alt="Altitude" border="0" height="25" width="25" align="right">';
 					}
 				else
 					{
@@ -175,8 +187,9 @@ Highcharts.setOptions({
 					var description = '';
 						
 						temp_picture_url = '<img src="img/Temperature.png" title="" alt="" border="1" height="25" width="22" align="center">';
-						hum_picture_url = '<img src="img/Humidity.png" title="" alt="" border="1" height="25" width="22" align="center">';
-						press_picture_url = '<img src="img/Pressure.png" title="" alt="" border="1" height="25" width="22" align="center">';
+						hum_picture_url = '<img src="img/Humidity.svg" title="" alt="" border="1" height="25" width="22" align="center">';
+						press_picture_url = '<img src="img/Pressure.svg" title="" alt="" border="1" height="25" width="22" align="center">';
+						
 					if(this.series.name == "Temp"){
 										description = '<div class="situation">Situation: <b>'+this.point.w_desc+'</b></div>';
 						tooltip_all = 	['<div class="tooltip">'+Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) + '<br/>'+
@@ -689,7 +702,7 @@ var defaultGaugeOptions = {
 								data:[0],
 								dataLabels: {
 									useHTML: true,
-									format: '<img src="img/Temperature.png" width="25px" align="center"><div style="text-align:center"><span style="font-size:20px;color:#009933">{y}</span></div>'
+									format: '<div style="text-align:center;padding-top:5px;"><span style="font-size:20px;color:#009933">{y}</span></div><img src="img/Temperature.svg" width="25px" align="center">'
 								}
 							}],
 							credits: {
@@ -714,8 +727,8 @@ var defaultGaugeOptions = {
 								name: 'Humidity',
 								data: [0],
 								dataLabels: {
-								
-									format: '<div style="text-align:center"><span style="font-size:20px;color:#009ce8">{y}</span></div>'
+									useHTML: true,
+									format: '<div style="text-align:center;"><span style="font-size:20px;color:#009ce8;">{y}</span><div class="gaugeIcons"><img src="img/Humidity.svg" width="25px" align="center"></div></div>'
 								}
 							}],
 							credits: {
@@ -747,7 +760,8 @@ var defaultGaugeOptions = {
 								name: 'Pressure',
 								data: [0],
 								dataLabels: {
-									format: '<div style="text-align:center"><span style="font-size:20px;color:orange">{y}</span></div>'
+									useHTML: true,
+									format: '<div style="text-align:center"><span style="font-size:20px;color:orange">{y}</span><div class="gaugeIcons"><img src="img/Pressure.svg" width="25px" align="center"></div></div>'
 								}
 							}],
 							credits: {
@@ -779,7 +793,8 @@ var defaultGaugeOptions = {
 								name: 'Rain/Snow',
 								data: [0],
 								dataLabels: {
-									format: '<div style="text-align:center"><span style="font-size:20px;color:orange">{y}</span></div>'
+									useHTML: true,
+									format: '<div style="text-align:center;"><span style="font-size:20px;color:#009ce8;">{y}</span><div class="gaugeIcons"><img src="img/Umbrella.svg" width="55px" align="center"></div></div>'
 								}
 							}],
 							credits: {

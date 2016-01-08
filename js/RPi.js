@@ -44,7 +44,7 @@ var main_optionsRPi = {
 						opposite: true,
 					}],
 					series: [{
-						name: 'Temp In',
+						name: 'Temp_In',
 						type: 'spline',
 						yAxis: 0,
 						dataLabels:{
@@ -60,7 +60,7 @@ var main_optionsRPi = {
 							valueSuffix: '°C',
 						}
 					},{
-						name: 'Temp Out',
+						name: 'Temp_Out',
 						type: 'spline',
 						yAxis:0,
 						color:'#6B4C9A',
@@ -243,6 +243,7 @@ var defaultGaugeOptions = {
                         innerRadius: '90%',
                         dataLabels: {
                             borderWidth: 0,
+							verticalAlign:"middle",
                             useHTML: false
                         }
                     }
@@ -277,7 +278,7 @@ var gaugeOptions_tempInRPi = {
 								name: 'Temp in',
 								dataLabels: {
 									useHTML: true,
-									format: '<img src="img/Hum.png" width="50px" align="center"><div style="text-align:center"><span style="font-size:20px;color:#009933">{y}</span></div>'
+									format: '<div style="text-align:center;margin-top: 25px;"><span style="font-size:20px;color:#009933">{y}</span></div>'
 								}
 							}]
 }
@@ -308,7 +309,8 @@ var gaugeOptions_tempOutRPi = {
 							series: [{
 								name: 'Temp out',
 								dataLabels: {
-									format: '<div style="text-align:center"><span style="font-size:20px;color:purple">{y}</span></div>'
+									useHTML: true,
+									format: '<div style="text-align:center;padding-top:5px;margi-top:25px;"><span style="font-size:20px;color:purple">{y}</span></div>'
 								}
 							}]
 }
@@ -332,8 +334,8 @@ var gaugeOptions_humidityRPi = {
 							series: [{
 								name: 'Humidity',
 								dataLabels: {
-								
-									format: '<div style="text-align:center"><span style="font-size:20px;color:#009ce8">{y}</span></div>'
+									useHTML: true,
+									format: '<div style="text-align:center;"><span style="font-size:20px;color:#009ce8;">{y}</span><div class="gaugeIcons"><img src="img/Humidity.svg" width="25px" align="center"></div></div>'
 								}
 							}]
 }
@@ -362,7 +364,8 @@ var gaugeOptions_pressureRPi = {
 							series: [{
 								name: 'Pressure',
 								dataLabels: {
-									format: '<div style="text-align:center"><span style="font-size:20px;color:orange">{y}</span></div>'
+									useHTML: true,
+									format: '<div style="text-align:center"><span style="font-size:20px;color:orange">{y}</span><div class="gaugeIcons"><img src="img/Pressure.svg" width="25px" align="center" style="fill:red"></div></div>'
 								}
 							}]
 }

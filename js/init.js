@@ -41,12 +41,11 @@
 			}
 			$.each(JSONdata,function(i,field){
 				if(setMoreTemperatureIn16Day){
-					Temperature.push({x:field.time_night,y:field.Temperature_night});
-					Temperature.push({x:field.time_morning,y:field.Temperature_morning});
+					Temperature.push({x:field.time_night,y:field.Temperature_night,humidity:field.Humidity,pressure:field.Pressure});
+					Temperature.push({x:field.time_morning,y:field.Temperature_morning,humidity:field.Humidity,pressure:field.Pressure});
 					Temperature.push({x:field.time,y:field.Temperature,humidity:field.Humidity,pressure:field.Pressure});
-					Temperature.push({x:field.time_eve,y:field.Temperature_eve});
+					Temperature.push({x:field.time_eve,y:field.Temperature_eve,humidity:field.Humidity,pressure:field.Pressure});
 				}else{
-					console.log(field.time);
 					Temperature.push({x:field.time,y:field.Temperature,humidity:field.Humidity,pressure:field.Pressure});
 				}
 				Humidity.push({x:field.time,y:field.Humidity});

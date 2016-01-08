@@ -125,8 +125,8 @@
 					var description = '';
 						
 						temp_picture_url = '<img src="img/Temperature.png" title="" alt="" border="1" height="25" width="22" align="center">';
-						hum_picture_url = '<img src="img/Humidity.png" title="" alt="" border="1" height="25" width="22" align="center">';
-						press_picture_url = '<img src="img/Pressure.png" title="" alt="" border="1" height="25" width="22" align="center">';
+						hum_picture_url = '<img src="img/Humidity.svg" title="" alt="" border="1" height="25" width="22" align="center">';
+						press_picture_url = '<img src="img/Pressure.svg" title="" alt="" border="1" height="25" width="22" align="center">';
 						if(!this.point.w_desc)
 							{situation='';}
 						else
@@ -581,7 +581,7 @@ var defaultGaugeOptions16Day = {
 								data:[0],
 								dataLabels: {
 									useHTML: true,
-									format: '<div style="text-align:center"><span style="font-size:20px;color:#009933">{y}</span></div>'
+									format: '<div style="text-align:center;padding-top:5px;"><span style="font-size:20px;color:#009933">{y}</span></div><img src="img/Temperature.svg" width="25px" align="center">'
 								}
 							}],
 							credits: {
@@ -606,7 +606,8 @@ var defaultGaugeOptions16Day = {
 								name: 'Humidity',
 								data: [0],
 								dataLabels: {
-									format: '<div style="text-align:center"><span style="font-size:20px;color:#009ce8">{y}</span></div>'
+									useHTML: true,
+									format: '<div style="text-align:center;"><span style="font-size:20px;color:#009ce8;">{y}</span><div class="gaugeIcons"><img src="img/Humidity.svg" width="25px" align="center"></div></div>'
 								}
 							}],
 							credits: {
@@ -636,7 +637,8 @@ var defaultGaugeOptions16Day = {
 								name: 'Pressure',
 								data: [0],
 								dataLabels: {
-									format: '<div style="text-align:center"><span style="font-size:20px;color:orange">{y}</span></div>'
+									useHTML: true,
+									format: '<div style="text-align:center"><span style="font-size:20px;color:orange">{y}</span><div class="gaugeIcons"><img src="img/Pressure.svg" width="25px" align="center"></div></div>'
 								}
 							}],
 							credits: {
@@ -669,7 +671,8 @@ var defaultGaugeOptions16Day = {
 								name: 'Rain/Snow',
 								data: [0],
 								dataLabels: {
-									format: '<div style="text-align:center"><span style="font-size:20px;color:orange">{y}</span></div>'
+									useHTML: true,
+									format: '<div style="text-align:center;"><span style="font-size:20px;color:#009ce8;">{y}</span><div class="gaugeIcons"><img src="img/Umbrella.svg" width="55px" align="center"></div></div>'
 								}
 							}],
 							credits: {
