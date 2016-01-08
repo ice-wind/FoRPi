@@ -278,7 +278,7 @@ var gaugeOptions_tempInRPi = {
 								name: 'Temp in',
 								dataLabels: {
 									useHTML: true,
-									format: '<div style="text-align:center;margin-top: 25px;"><span style="font-size:20px;color:#009933">{y}</span></div>'
+									format: '<div style="text-align:center;"><span style="font-size:20px;color:#009ce8;">{y}</span><div class="gaugeIcons"><img src="img/TemperatureIn.svg" width="45px" align="center"></div></div>'
 								}
 							}]
 }
@@ -310,7 +310,7 @@ var gaugeOptions_tempOutRPi = {
 								name: 'Temp out',
 								dataLabels: {
 									useHTML: true,
-									format: '<div style="text-align:center;padding-top:5px;margi-top:25px;"><span style="font-size:20px;color:purple">{y}</span></div>'
+									format: '<div style="text-align:center;"><span style="font-size:20px;color:#009ce8;">{y}</span><div class="gaugeIcons"><img src="img/TemperatureOut.svg" width="45px" align="center"></div></div>'
 								}
 							}]
 }
@@ -365,7 +365,7 @@ var gaugeOptions_pressureRPi = {
 								name: 'Pressure',
 								dataLabels: {
 									useHTML: true,
-									format: '<div style="text-align:center"><span style="font-size:20px;color:orange">{y}</span><div class="gaugeIcons"><img src="img/Pressure.svg" width="25px" align="center" style="fill:red"></div></div>'
+									format: '<div style="text-align:center"><span style="font-size:20px;color:orange">{y}</span><div class="gaugeIcons"><img src="img/Pressure.svg" width="45px" align="center" style="fill:red"></div></div>'
 								}
 							}]
 }

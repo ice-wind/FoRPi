@@ -124,7 +124,7 @@
 					var tooltip_all = '';
 					var description = '';
 						
-						temp_picture_url = '<img src="img/Temperature.png" title="" alt="" border="1" height="25" width="22" align="center">';
+						temp_picture_url = '<img src="img/Thermometer.svg" title="" alt="" border="1" height="25" width="22" align="center">';
 						hum_picture_url = '<img src="img/Humidity.svg" title="" alt="" border="1" height="25" width="22" align="center">';
 						press_picture_url = '<img src="img/Pressure.svg" title="" alt="" border="1" height="25" width="22" align="center">';
 						if(!this.point.w_desc)
@@ -562,15 +562,15 @@ var defaultGaugeOptions16Day = {
 							yAxis: {
 								min: 0,
 								max: 60,
-								minColor: '#99D6AD',
-								maxColor: '#005C1F',
+								minColor: '#DD6900',
+								maxColor: '#C41C18',
 								title: {
 									text: 'Temperature'
 								}
 							},
 							plotOptions:{
 								solidgauge:{
-									borderColor:'green'
+									borderColor:'#B20B2B'
 								}
 							},
 							tooltip:{
@@ -581,7 +581,7 @@ var defaultGaugeOptions16Day = {
 								data:[0],
 								dataLabels: {
 									useHTML: true,
-									format: '<div style="text-align:center;padding-top:5px;"><span style="font-size:20px;color:#009933">{y}</span></div><img src="img/Temperature.svg" width="25px" align="center">'
+									format: '<div style="text-align:center;"><span style="font-size:20px;color:#009ce8;">{y}</span><div class="gaugeIcons"><img src="img/Thermometer.svg" width="20px" align="center"></div></div>'
 								}
 							}],
 							credits: {
@@ -638,7 +638,7 @@ var defaultGaugeOptions16Day = {
 								data: [0],
 								dataLabels: {
 									useHTML: true,
-									format: '<div style="text-align:center"><span style="font-size:20px;color:orange">{y}</span><div class="gaugeIcons"><img src="img/Pressure.svg" width="25px" align="center"></div></div>'
+									format: '<div style="text-align:center"><span style="font-size:20px;color:orange">{y}</span><div class="gaugeIcons"><img src="img/Pressure.svg" width="45px" align="center"></div></div>'
 								}
 							}],
 							credits: {
