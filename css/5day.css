@@ -64,8 +64,8 @@
 
 .leftIcons{
 	fill: white;
-    width: 60px;
-    height: 45px;
+    width: 55px;
+    height: 42px;
     padding: 0 15 0 10;
 	transition: fill 0.3s;
 }
@@ -495,68 +495,6 @@
 	display:block;
 	visibility:visible;
 }
-/*--------------------highchart-----------------*/
-table{
-	border-collapse: collapse;
-	width:100%;
-	align:center;
-}
-.td{
-	min-width:60px;					
-}
-.th{
-	
-}
-.table, td, tr {
-	border:2px solid #CBCBCB;	
-	border-collapse: collapse;
-	align:center;
-	width:100%;
-}
-.label {
-	z-index: 1 ;
- }
-.highcharts-tooltip span {
-	background-color:white;
-	border:1px solid green;
-	opacity:0.9;
-	z-index:99 ;
-	white-space:normal;
-	width:auto;
-	min-width:200px;
-	height:auto;
-	overflow:auto;
-	align:center;
-}
-.tooltip {
-	padding:5px;
-}
-.situation{
-	font-family: "Times New Roman", Times, serif;
-	font-size: 18px;
-	
-}
-.gaugeIcons{
-	display:block;
-	text-align:center;
-}
-.wrapImage{
-	position:relative;
-}
-
-
-
-/*-----------------END highchart-----------------*/
-@media all and (max-width: 300px) {
- .row_base{
-    -webkit-flex-direction: column;
-	flex-direction: column;
-  }
-  .right_content{
-	-webkit-flex-direction: column;
-	flex-direction: column;
-  }
-}
 /*------------------------Click effect----------------------------*/
 .ink {
   display: block;
@@ -619,7 +557,7 @@ table{
   -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 8px 8px 0;
 }
 
-/*------------------------------TIME---------------------------*/
+/*------------------------------RIGHT SIDE TIME---------------------------*/
 #time{
 	display: -webkit-flex;
 	display: -o-flex;
@@ -701,4 +639,97 @@ table{
 }
 #today{
 	font-size:20px;
+}
+
+
+/*------------------------------------HIGHCHART ------------------------------------*/
+table{
+	border-collapse: collapse;
+	width:100%;
+	align:center;
+}
+.td{
+	min-width:60px;					
+}
+.th{
+	
+}
+.table, td, tr {
+	border:2px solid #CBCBCB;	
+	border-collapse: collapse;
+	align:center;
+	width:100%;
+}
+.label {
+	z-index: 1 ;
+ }
+.highcharts-tooltip span {
+	background-color:white;
+	border:1px solid green;
+	opacity:0.9;
+	z-index:99 ;
+	white-space:normal;
+	width:auto;
+	min-width:200px;
+	height:auto;
+	overflow:auto;
+	align:center;
+}
+.tooltip {
+	padding:5px;
+}
+.situation{
+	font-family: "Times New Roman", Times, serif;
+	font-size: 18px;
+	
+}
+.gaugeIcons{
+	display:block;
+	text-align:center;
+}
+.wrapImage{
+	position:relative;
+}
+
+/*-----------------END highchart-----------------*/
+
+/*-----------------------------------------MEDIA Resp--------------------------------------*/
+@media all and (max-width: 1400px) {
+	.leftIcons{
+		width: 45px;
+		height: 45px;
+  }
+}
+@media all and (max-width: 300px) {
+ .row_base{
+    -webkit-flex-direction: column;
+	flex-direction: column;
+  }
+  .right_content{
+	-webkit-flex-direction: column;
+	flex-direction: column;
+  }
+  .leftIcons{
+	width: 40px;
+    height: 40px;
+	padding-left:20;
+	padding-right:20;
+  }
+  #accordion{
+	margin:0px auto;
+  }
+  #accordion li label{
+	display:block;
+	text-align:center;
+  }
+  .leftMenu_text{
+	display:none;
+  }
+  .row_base{
+	display:block;
+  }
+  .left_menu{
+	max-width:300;
+	width:auto;
+  }
 }
