@@ -119,15 +119,12 @@ function update5DayCharts(response){
 		create5DayCharts();
 		var container = $('#container').highcharts();
 	}
-	console.log(data5Day.getWeather_icon());
-	console.log(data5Day.getTemperature());
 	container.series[0].setData(mergeObjects(data5Day.getTemperature(),data5Day.getWeather_description(),data5Day.getWeather_icon())); //need to merge for tooltip
 	container.series[1].setData(data5Day.getHumidity());
 	container.series[2].setData(data5Day.getRain());
 	container.series[3].setData(data5Day.getSnow());
 	container.series[4].setData(data5Day.getClouds());
 	
-
 	var wind = $('#graph_windSpeed').highcharts();
 	wind.series[0].setData(data5Day.getWind_speed());
 	wind.series[1].setData(data5Day.getWind_deg());
@@ -149,7 +146,6 @@ function update5DayCharts(response){
 	var gauge4 = $('#4gauge').highcharts();
 	gauge4.series[0].points[0].update(data5Day.getRainNow()+data5Day.getSnowNow());
 	
-	
 	updateSideBar(data5Day);
 }
 
@@ -162,19 +158,15 @@ function updateSideBar(data){
 	var thirdDayHtmlElement=document.getElementById("thirdDay");
 	var fourthDayHtmlElement=document.getElementById("fourthDay");
 	
-	console.log(data.getTemperature());
-	
 	for(var i=0;i!==nextDay;i++){
 		var dateForecast = new Date((data.getTemperature()[i].x)-288000000);
 		var forecastHours=dateForecast.getHours();
-		console.log(data.getTemperature()[i].x-28800000 +"----"+i+"---"+forecastHours + "---"+ 14);
+		//console.log(data.getTemperature()[i].x-28800000 +"----"+i+"---"+forecastHours + "---"+ 14);
 		if(forecastHours===14||forecastHours===12){
 				nextDay=i;
 				break; 
 			}
 	}
-	console.log(nextDay);
-	
 
 	todayHtmlElement.innerHTML = "Now: "+'<span style="float:right"> ' +data.getTemperatureNow()+"ºC " +  '<img src="img/'+data.getWeather_icon()[0].y+'.png" title="" alt=""  height="25" width="22" align="center" style="margin:auto 0 auto 10;	 float:right"></span>';
 	firsDayHtmlElement.innerHTML = getDayString(dateNow.getDay()+1)  +'<span style="float:right"> '+data.getTemperature()[nextDay+8].y+"ºC  "+ ' <img src="img/'+data.getWeather_icon()[nextDay+8].y+'.png" title="" alt=""  height="25" width="22" align="center" style="margin:auto 0 auto 10; float:right"></span>';
