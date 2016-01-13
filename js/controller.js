@@ -146,33 +146,85 @@ function update5DayCharts(response){
 	var gauge4 = $('#4gauge').highcharts();
 	gauge4.series[0].points[0].update(data5Day.getRainNow()+data5Day.getSnowNow());
 	
-	updateSideBar(data5Day);
+	updateSideBar(data5Day,true);
 }
 
-function updateSideBar(data){
+function updateSideBar(data,is5Day){
+	var citySideBarHtmlElement=document.getElementById("citySideBar");
 	var dateNow = new Date();
 	var nextDay = 26;
+	var corectIcon = 0;
+	var corectionTemperature =1;
 	var todayHtmlElement=document.getElementById("today");
 	var firsDayHtmlElement=document.getElementById("firstDay");
 	var secondDayHtmlElement=document.getElementById("secondDay");
 	var thirdDayHtmlElement=document.getElementById("thirdDay");
 	var fourthDayHtmlElement=document.getElementById("fourthDay");
+	var fivedDayHtmlElement = document.getElementById("fivedDay");
+	var	sixthDayHtmlElement = document.getElementById("sixthDay");
+	var	seventhDayHtmlElement = document.getElementById("seventhDay");
+	var	eightDayHtmlElement = document.getElementById("eightDay");
+	var	ninethDayHtmlElement = document.getElementById("ninethDay");
+	var	tenthDayHtmlElement = document.getElementById("tenthDay");
 	
 	for(var i=0;i!==nextDay;i++){
 		var dateForecast = new Date((data.getTemperature()[i].x)-288000000);
 		var forecastHours=dateForecast.getHours();
 		//console.log(data.getTemperature()[i].x-28800000 +"----"+i+"---"+forecastHours + "---"+ 14);
-		if(forecastHours===14||forecastHours===12){
+		if(forecastHours===14||forecastHours===12){	//temp from next day
 				nextDay=i;
 				break; 
 			}
 	}
-
+	if (is5Day)
+	{
+		corectIcon=33;
+		corectionTemperature =1;
+		
+		fivedDayHtmlElement.innerHTML="";
+		sixthDayHtmlElement.innerHTML="";
+		seventhDayHtmlElement.innerHTML="";
+		eightDayHtmlElement.innerHTML="";
+		ninethDayHtmlElement.innerHTML="";
+		tenthDayHtmlElement.innerHTML="";
+		
+		fivedDayHtmlElement.setAttribute("style","background-color:#e6e6e6;box-shadow: 10px 0px 9px -9px rgba(137, 137, 137, 0.9) inset;");
+		sixthDayHtmlElement.setAttribute("style","background-color:#e6e6e6;box-shadow: 10px 0px 9px -9px rgba(137, 137, 137, 0.9) inset;");
+		seventhDayHtmlElement.setAttribute("style","background-color:#e6e6e6;box-shadow: 10px 0px 9px -9px rgba(137, 137, 137, 0.9) inset;");
+		eightDayHtmlElement.setAttribute("style","background-color:#e6e6e6;box-shadow: 10px 0px 9px -9px rgba(137, 137, 137, 0.9) inset;");
+		ninethDayHtmlElement.setAttribute("style","background-color:#e6e6e6;box-shadow: 10px 0px 9px -9px rgba(137, 137, 137, 0.9) inset;");
+		tenthDayHtmlElement.setAttribute("style","background-color:#e6e6e6;box-shadow: 10px 0px 9px -9px rgba(137, 137, 137, 0.9) inset;");
+		
+	}else{
+		corectIcon=7;
+		corectionTemperature = 2;
+		
+		fivedDayHtmlElement.setAttribute("style","background-color:#cfcccc;");
+		
+		seventhDayHtmlElement.setAttribute("style","background-color:#cfcccc;");
+		
+		ninethDayHtmlElement.setAttribute("style","background-color:#cfcccc;");
+		
+	}
+	console.log(data.getTemperature());
+	console.log(data.getWeather_icon());
+	citySideBarHtmlElement.innerHTML = "In <p>"+ $(".search").val()+"</p>";
 	todayHtmlElement.innerHTML = "Now: "+'<span style="float:right"> ' +data.getTemperatureNow()+"ºC " +  '<img src="img/'+data.getWeather_icon()[0].y+'.png" title="" alt=""  height="25" width="22" align="center" style="margin:auto 0 auto 10;	 float:right"></span>';
-	firsDayHtmlElement.innerHTML = getDayString(dateNow.getDay()+1)  +'<span style="float:right"> '+data.getTemperature()[nextDay+8].y+"ºC  "+ ' <img src="img/'+data.getWeather_icon()[nextDay+8].y+'.png" title="" alt=""  height="25" width="22" align="center" style="margin:auto 0 auto 10; float:right"></span>';
-	secondDayHtmlElement.innerHTML = getDayString(dateNow.getDay()+2) +'<span style="float:right"> '+data.getTemperature()[nextDay+16].y+"ºC  "+  ' <img src="img/'+data.getWeather_icon()[nextDay+16].y+'.png" title="" alt=""  height="25" width="22" align="center" style="margin:auto 0 auto 10; float:right"></span>';
-	thirdDayHtmlElement.innerHTML = getDayString(dateNow.getDay()+3) +'<span style="float:right"> '+data.getTemperature()[nextDay+24].y+"ºC  "+  '<img src="img/'+data.getWeather_icon()[nextDay+24].y+'.png" title="" alt=""  height="25" width="22" align="center" style="margin:auto 0 auto 10; float:right"></span>';
-	fourthDayHtmlElement.innerHTML = getDayString(dateNow.getDay()+4) +'<span style="float:right"> '+ data.getTemperature()[nextDay+24].y+"ºC "+ '<img src="img/'+data.getWeather_icon()[nextDay+32].y+'.png" title="" alt=""  height="25" width="22" align="center" style="margin:auto 0 auto 10; float:right"></span>';
+	firsDayHtmlElement.innerHTML = getDayString(dateNow.getDay()+1)  +'<span > '+data.getTemperature()[nextDay+8/corectionTemperature].y+"ºC  "+ ' <img src="img/'+data.getWeather_icon()[nextDay+8%corectIcon].y+'.png" title="" alt=""  ></span>';
+	secondDayHtmlElement.innerHTML = getDayString(dateNow.getDay()+2) +'<span > '+data.getTemperature()[nextDay+16/corectionTemperature].y+"ºC  "+  ' <img src="img/'+data.getWeather_icon()[nextDay+16%corectIcon].y+'.png" title="" alt=""  ></span>';
+	thirdDayHtmlElement.innerHTML = getDayString(dateNow.getDay()+3) +'<span > '+data.getTemperature()[nextDay+24/corectionTemperature].y+"ºC  "+  '<img src="img/'+data.getWeather_icon()[nextDay+24%corectIcon].y+'.png" title="" alt=""  ></span>';
+	fourthDayHtmlElement.innerHTML = getDayString(dateNow.getDay()+4) +'<span > '+ data.getTemperature()[nextDay+32/corectionTemperature].y+"ºC "+ '<img src="img/'+data.getWeather_icon()[nextDay+32%corectIcon].y+'.png" title="" alt=""  ></span>';
+	if(!is5Day)
+	{
+		fivedDayHtmlElement.innerHTML = getDayString(dateNow.getDay()+5)  +'<span > '+data.getTemperature()[nextDay+20].y+"ºC  "+ ' <img src="img/'+data.getWeather_icon()[5].y+'.png" title="" alt=""  ></span>';
+		sixthDayHtmlElement.innerHTML = getDayString(dateNow.getDay()+6) +'<span > '+data.getTemperature()[nextDay+24].y+"ºC  "+  ' <img src="img/'+data.getWeather_icon()[6].y+'.png" title="" alt="" ></span>';
+		seventhDayHtmlElement.innerHTML = getDayString(dateNow.getDay()+7) +'<span > '+data.getTemperature()[nextDay+28].y+"ºC  "+  '<img src="img/'+data.getWeather_icon()[7].y+'.png" title="" alt=""  ></span>';
+		eightDayHtmlElement.innerHTML = getDayString(dateNow.getDay()+8) +'<span > '+ data.getTemperature()[nextDay+32].y+"ºC "+ '<img src="img/'+data.getWeather_icon()[8].y+'.png" title="" alt=""  ></span>';
+		ninethDayHtmlElement.innerHTML = getDayString(dateNow.getDay()+9) +'<span > '+ data.getTemperature()[nextDay+36].y+"ºC "+ '<img src="img/'+data.getWeather_icon()[9].y+'.png" title="" alt="" ></span>';
+		tenthDayHtmlElement.innerHTML = getDayString(dateNow.getDay()+10) +'<span> '+ data.getTemperature()[nextDay+40].y+"ºC "+ '<img src="img/'+data.getWeather_icon()[10].y+'.png" title="" alt="" ></span>';
+	
+	}
+	
 }
 
 function update16DayCharts(response){
@@ -205,6 +257,8 @@ function update16DayCharts(response){
 	gauge3.series[0].points[0].update(data16Day.getPressureNow());
 	var gauge4 = $('#4gauge').highcharts();
 	gauge4.series[0].points[0].update(data16Day.getRainNow()+data16Day.getSnowNow());
+	
+	updateSideBar(data16Day,false);
 }
 
 function showSearchSugestionResult(){
