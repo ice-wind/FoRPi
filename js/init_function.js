@@ -38,6 +38,7 @@ function loadJSON5Day(callback){
 
 function getDayString(day){
 	(day>6)?day-=7:true;
+	(day>6)?day-=7:true;
 	var dayOfWeek = Array(7);
 	dayOfWeek[0] = "Sunday";
 	dayOfWeek[1] = "Monday";
@@ -70,6 +71,9 @@ function getDayString(day){
 //-------------------------------DOCUMENT READY SECTION----------------------------------------------------------------------------
 //------------------------------scroll to top--------------------------------------------
 $(document).ready(function(){
+	
+	 
+ 
 	
 	$('.menu_icon').on('click',function(){
 				$('.row_base').toggleClass('expanded');
@@ -169,8 +173,11 @@ var selectedButton=2;
 			console.log("there is no chart to erase!");
 		}
 	}
+	
+
 	$('.left_top').on('click',function(){
 		location.reload(true); //force reload
+		
 	});
 //----------------------Click efect ---------Thanks to 440desig-----
 	var ink, d, x, y;

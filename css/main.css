@@ -396,7 +396,7 @@
 	-webkit-flex-direction:column ;
 	-o-flex-direction:column ;
 	flex-direction:column ;
-	min-width:190px;
+	min-width:20px;
 	background:#e6e6e6;
 	-webkit-box-shadow: 10px 0px 9px -9px rgba(137, 137, 137, 0.9) inset;
 	box-shadow: 10px 0px 9px -9px rgba(137, 137, 137, 0.9) inset;
@@ -659,6 +659,13 @@
 .sideForecast span img{
 	height:25;
 	width:22;
+	align:center;
+	margin:auto 0 auto 10; 
+	float:right;
+}
+.sideForecast span div{
+	height:35;
+	width:35;
 	align:center;
 	margin:auto 0 auto 10; 
 	float:right;
