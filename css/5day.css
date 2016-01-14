@@ -686,6 +686,7 @@ table{
 .gaugeIcons{
 	display:block;
 	text-align:center;
+	height:41;
 }
 .wrapImage{
 	position:relative;
