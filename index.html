@@ -3,19 +3,19 @@
 <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
 <meta content="utf-8" http-equiv="encoding">
 	<title>Get_forecast_data</title>
-	<link rel="stylesheet" type="text/css" href="css/5day.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/forecastIcon.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="http://code.highcharts.com/highcharts.js"></script>
 	<script src="http://code.highcharts.com/highcharts-more.js"></script>
 	<script src="http://code.highcharts.com/modules/exporting.js"></script>
 	<script src="http://code.highcharts.com/modules/solid-gauge.js"></script>
-	<script type="text/javascript" src="js/init.js"></script>
+	<script type="text/javascript" src="js/init_model.js"></script>
+	<script type="text/javascript" src="js/init_function.js"></script>
 	<script type="text/javascript" src="js/5day.js"></script>
 	<script type="text/javascript" src="js/16day.js"></script>
 	<script type="text/javascript" src="js/RPi.js"></script>
-	<script src="js/toggleClass.js"></script>
-	<script type="text/javascript" src="js/search.js"></script>
-	
+	<script type="text/javascript" src="js/controller.js"></script>
 </head>
 <body>
 Start
@@ -82,6 +82,7 @@ Start
 					</div>
 					<div class="side_menu_area">
 						<div ID="time"></div>
+						<div ID="citySideBar"></div>
 						<div ID="date_day"></div>
 						<div ID="day"></div>
 						<div ID="wrap_year">
@@ -93,6 +94,12 @@ Start
 						<div ID="secondDay" class="sideForecast"></div>
 						<div ID="thirdDay" class="sideForecast"></div>
 						<div ID="fourthDay" class="sideForecast"></div>
+						<div ID="fivedDay" class="sideForecast"></div>
+						<div ID="sixthDay" class="sideForecast"></div>
+						<div ID="seventhDay" class="sideForecast"></div>
+						<div ID="eightDay" class="sideForecast"></div>
+						<div ID="ninethDay" class="sideForecast"></div>
+						<div ID="tenthDay" class="sideForecast"></div>
 					</div>
 				</div>
 			</div>
