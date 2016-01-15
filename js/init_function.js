@@ -25,6 +25,27 @@ function round_corner(){
 		}
 }
 //-------------------------------end round corner in HIGHCHARTS----------------------------------------
+
+var isIE=(function(){
+	
+	var ms_ie = false;
+    var ua = window.navigator.userAgent;
+    var old_ie = ua.indexOf('MSIE ');
+    var new_ie = ua.indexOf('Trident/');
+
+    if ((old_ie > -1) || (new_ie > -1)) {
+        ms_ie = true;
+		
+    }
+
+    if ( ms_ie ) {
+		$('.main').innerHTML = '';
+		$('.main').addClass('page415');
+        //alert("Oops! This site is not optimized for IE!");
+    }
+}());
+
+
 function getMenuSelection(){
 	return $('input[name="accordion"]:checked').val();
 }
@@ -283,6 +304,8 @@ function setYear(){
 }
 setYear();
 //---------------------END Time---------------------------------------
-	
+//--------------------------------------DETECT IE---------------------------------------//
+
 });
+
 //-------------------------------DOCUMENT READY SECTION END------------------------------------------------------------------------
