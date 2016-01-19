@@ -116,6 +116,23 @@ $(document).ready(function(){
       return false;
    });
    
+   $('#information').on("click",function(){
+	  $('.information').fadeIn(); 
+   });
+   $('#about').on("click",function(){
+	  $('.about').fadeIn(); 
+   });
+   $('html').click(function(){
+	  $('.information').fadeOut(); 
+	  $('.about').fadeOut();
+   });
+   $('#information').click(function(event){
+    event.stopPropagation();
+	});
+	$('#about').click(function(event){
+    event.stopPropagation();
+	});
+	
 //-------------------------------fade out search---------------------------------------------
    $('#accordion input').on("change",function(){
 		var selected = getMenuSelection();
@@ -142,9 +159,9 @@ var selectedButton=2;
 	$('#first').on('click',function(){
 		if(selectedButton!=1){
 			selectedButton=1;
-			destroyAllCharts();
-			deleteUnusedDIV();
-			createRPiCharts();
+				destroyAllCharts();
+				deleteUnusedDIV();
+				createRPiCharts();	
 		}
 	});
 	$('#second').on('click',function(){
