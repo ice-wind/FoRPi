@@ -736,18 +736,17 @@ footer{
 .popupContent{
 
 }
-.load{
-	background:url('../img/load.gif');
-	background-repeat:no-repeat;
-	position:fixed;
+.copy{
+	position:absolute;
+	width:-moz-available;
+	width:fill;
+	background-color:#1d1d1d;
+	color:grey;
+	bottom:0;
 	left:0;
-	right:0;
-	margin:auto;
-	z-index:1000;
-	width:100%;
-	height:100%;
-	display:none;
-	
+	text-align:left;
+	padding-left:10;
+	font-size:20;
 }
 /*------------------------------------HIGHCHART ------------------------------------*/
 table{
