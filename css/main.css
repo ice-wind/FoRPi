@@ -35,7 +35,7 @@
 .left_menu{
 	will-change:ease;
 	min-width:65px;
-	max-width:70px;
+	max-width:67px;
 	margin:0px;
 	flex:0.3;
 	-webkit-flex:0.3;
@@ -50,6 +50,7 @@
 	transition-duration: 0.3s;
 	transition-timing-function:ease;
 	font-weight:600;
+	margin-bottom:5px;
 }
 .expanded .left_menu{
 	will-change:ease;
@@ -60,6 +61,7 @@
 	transition-timing-function:ease;
 	max-width:300px;
 	min-width:270px;
+	
 }
 
 .leftIcons{
@@ -399,8 +401,10 @@
 	min-width:20px;
 	background:#e6e6e6;
 	-webkit-box-shadow: 10px 0px 9px -9px rgba(137, 137, 137, 0.9) inset;
-	box-shadow: 10px 0px 9px -9px rgba(137, 137, 137, 0.9) inset;
+	box-shadow: 3px 0px 11px -5px rgba(137, 137, 137, 0.9) inset;
 	border-left:1px solid #a7a7a7;
+	border-bottom:1px solid #a7a7a7;
+	margin-bottom:8px
 }
 .scrollToTop{
 	width:40px;
@@ -677,7 +681,23 @@
 	font-size:20px;
 }
 
+.page415{
+	position:fixed;
+	width:100%;
+	height:100%;
+	background:grey;
+}
 
+footer{
+	height:250px;
+	position:relative;
+	background-color:#3B474D;
+	color:#d1dce4;
+	font-size:25;
+	z-index:100;
+	padding:20px;
+	text-align:center;
+}
 /*------------------------------------HIGHCHART ------------------------------------*/
 table{
 	border-collapse: collapse;

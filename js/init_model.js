@@ -57,7 +57,6 @@
 	function prepare_RPiData(){
 		
 		elementData.call(this);
-		var self = this;
 		var TemperatureIn=[];
 		var TemperatureOut=[];
 		var Sea_level=[];
