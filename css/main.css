@@ -695,9 +695,91 @@ footer{
 	color:#d1dce4;
 	font-size:25;
 	z-index:100;
-	padding:20px;
 	text-align:center;
 }
+.patern{
+	background:url('../img/pat1.png');
+	background-repeat:repeat;
+	color:#fff;
+	width:100%;
+	height:100%;
+	text-align:center;
+	text-align:-moz-center;
+	padding-top:2px;
+}
+.footerMenu{
+	padding:20px;
+}
+.information, .about{
+	background-color:#005462;
+	color:#000;
+	width:75%;
+	height:80%;
+	border:3px solid #e6e6e6;
+	border-radius:10px;
+	position:absolute;
+	top:-50px;
+	left:0;
+	right:0;
+	margin:auto;
+	display:none;
+}
+#information:hover,#about:hover{
+	color:#56CEFE;
+	cursor:pointer;
+}
+.popupHeader{
+	background: -moz-linear-gradient(90deg, rgba(3,155,229,1) 0%, rgba(32,191,227,1) 87%, rgba(32,191,227,1) 100%); /* ff3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(32,191,227,1)), color-stop(13%, rgba(32,191,227,1)), color-stop(100%, rgba(3,155,229,1))); /* safari4+,chrome */
+	background: -webkit-linear-gradient(90deg, rgba(3,155,229,1) 0%, rgba(32,191,227,1) 87%, rgba(32,191,227,1) 100%); /* safari5.1+,chrome10+ */
+	background: -o-linear-gradient(90deg, rgba(3,155,229,1) 0%, rgba(32,191,227,1) 87%, rgba(32,191,227,1) 100%); /* opera 11.10+ */
+	background: -ms-linear-gradient(90deg, rgba(3,155,229,1) 0%, rgba(32,191,227,1) 87%, rgba(32,191,227,1) 100%); /* ie10+ */
+	background: linear-gradient(0deg, rgba(3,155,229,1) 0%, rgba(32,191,227,1) 87%, rgba(32,191,227,1) 100%); /* w3c */
+}
+.popup{
+	z-index:50;
+}
+.popupContent{
+
+}
+.supportbrowsers{
+	font-size: 20;
+}
+.greyscale{
+}
+.grayscale img{
+	width:50px;
+	height:auto;
+	opacity:0.5;
+	filter: grayscale(100%);
+	-webkit-opacity:0.5;
+	-webkit-filter: grayscale(100%);  
+	
+	transition: all 1s ease; 
+    -webkit-transition: all 1s ease;  
+}
+.grayscale img:hover{
+	opacity:1;
+	filter: grayscale(0%);
+	filter: drop-shadow(0px 0px 4px rgba(179, 179, 179,0.9));
+	-webkit-opacity:1;
+	-webkit-filter: grayscale(0%);
+	-webkit-filter: drop-shadow(0px 0px 4px rgba(179, 179, 179,0.9));
+  
+}
+.copy{
+	position:absolute;
+	width:-moz-available;
+	width:fill;
+	background-color:#1d1d1d;
+	color:grey;
+	bottom:0;
+	left:0;
+	text-align:left;
+	padding-left:10;
+	font-size:15;
+}
+
 /*------------------------------------HIGHCHART ------------------------------------*/
 table{
 	border-collapse: collapse;
@@ -742,6 +824,7 @@ table{
 .gaugeIcons{
 	display:block;
 	text-align:center;
+	height:41;
 }
 .wrapImage{
 	position:relative;
