@@ -59,6 +59,7 @@ function getForecastData(city_id){
 			dataType: "json",
 			data:	{city_id:city_id},
 			success:function(response){
+				console.log(response);
 				if(selected5Day){
 					update5DayCharts(response);
 				}else{
@@ -284,7 +285,8 @@ function updateSideBar(data,is5Day){
  
 function update16DayCharts(response){
 	data16Day.variableFree();
-	data16Day.fillVariables(response);			
+	data16Day.fillVariables(response);	
+		console.log(data16Day.getHumidity());
 	
 	var container = $('#container').highcharts();
 	

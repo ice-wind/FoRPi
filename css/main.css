@@ -705,7 +705,6 @@ footer{
 	height:100%;
 	text-align:center;
 	text-align:-moz-center;
-	padding-top:2px;
 }
 .footerMenu{
 	padding:20px;
@@ -770,6 +769,7 @@ footer{
 .copy{
 	position:absolute;
 	width:-moz-available;
+	width:-webkit-fill-available;
 	width:fill;
 	background-color:#1d1d1d;
 	color:grey;
