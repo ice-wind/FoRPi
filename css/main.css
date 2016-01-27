@@ -689,7 +689,7 @@
 }
 
 footer{
-	height:250px;
+	height:290px;
 	position:relative;
 	background-color:#3B474D;
 	color:#d1dce4;
@@ -706,10 +706,36 @@ footer{
 	text-align:center;
 	text-align:-moz-center;
 }
-.footerMenu{
-	padding:20px;
+.footerMenuWraper{
+	display: -webkit-flex;
+	display: -o-flex;
+	display: -ms-flex;
+	display: -moz-flex;
+	display: flex;
+	justify-content:space-around;
+	padding-top:20;
 }
-.information, .about{
+.footerMenu{
+	display: -webkit-flex;
+	display: -o-flex;
+	display: -ms-flex;
+	display: -moz-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+	float:left;
+	}
+.subMenuHeader{
+	cursor:none;
+	text-decoration:underline;
+}
+.subMenuItems{
+	font-size:16;
+	padding-top:5;
+	color:#d4d4d4;
+}
+.project,.special, .about, .contact{
 	background-color:#005462;
 	color:#000;
 	width:75%;
@@ -722,8 +748,9 @@ footer{
 	right:0;
 	margin:auto;
 	display:none;
+	font-size:25;
 }
-#information:hover,#about:hover{
+#project:hover,#special:hover,#about:hover,#contact:hover{
 	color:#56CEFE;
 	cursor:pointer;
 }
@@ -739,12 +766,16 @@ footer{
 	z-index:50;
 }
 .popupContent{
-
+ text-align:left;
+ padding:5;
+ color:white;
+ font-size:15;
 }
 .supportbrowsers{
 	font-size: 20;
-}
-.greyscale{
+	-webkit-flex-direction: row;
+	-o-flex-direction: row;
+	flex-direction: row;
 }
 .grayscale img{
 	width:50px;
@@ -756,6 +787,12 @@ footer{
 	
 	transition: all 1s ease; 
     -webkit-transition: all 1s ease;  
+}
+.connectIcons img{
+	width:25;
+	height:auto;
+	padding-top:12;
+	cursor:pointer;
 }
 .grayscale img:hover{
 	opacity:1;
