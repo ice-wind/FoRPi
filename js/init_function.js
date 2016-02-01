@@ -116,22 +116,37 @@ $(document).ready(function(){
       return false;
    });
    
-   $('#information').on("click",function(){
-	  $('.information').fadeIn(); 
+   $('#project').on("click",function(){
+	  $('.project').fadeIn(); 
+   });
+   $('#special').on("click",function(){
+	  $('.special').fadeIn(); 
    });
    $('#about').on("click",function(){
 	  $('.about').fadeIn(); 
    });
-   $('html').click(function(){
-	  $('.information').fadeOut(); 
-	  $('.about').fadeOut();
+   $('#contact').on("click",function(){
+	  $('.contact').fadeIn(); 
    });
-   $('#information').click(function(event){
+   $('html').click(function(){
+	  $('.project').fadeOut();
+	  $('.special').fadeOut();
+	  $('.about').fadeOut();
+	  $('.contact').fadeOut();
+   });
+   $('#project').click(function(event){
+    event.stopPropagation();
+	});
+	$('#special').click(function(event){
     event.stopPropagation();
 	});
 	$('#about').click(function(event){
     event.stopPropagation();
 	});
+	$('#contact').click(function(event){
+    event.stopPropagation();
+	});
+	
 	
 //-------------------------------fade out search---------------------------------------------
    $('#accordion input').on("change",function(){
