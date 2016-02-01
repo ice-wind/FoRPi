@@ -132,7 +132,9 @@ $(document).ready(function(){
 	  $('.project').fadeOut();
 	  $('.special').fadeOut();
 	  $('.about').fadeOut();
-	  $('.contact').fadeOut();
+   });
+   $('.popupHeader').click(function(){
+	   $('.contact').fadeOut(); 
    });
    $('#project').click(function(event){
     event.stopPropagation();

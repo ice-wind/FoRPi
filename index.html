@@ -130,7 +130,19 @@ Start
 				<div class="project popup" ><div class="popupHeader">Project</div><div class="popupContent"><article>This project contain two main section. First include graphs from my home sensors, connect to raspberry Pi. Second from forecast graphs. Graphs have been made from data which come from openweather API.<br />Copyright information: site is for non-comercial use!<br /></article></div></div>
 				<div class="special popup" ><div class="popupHeader">Special</div><div class="popupContent"><article>I would like to give special thanks to openweathermap.org team, for forecast data!</article></div></div>
 				<div class="about popup" ><div class="popupHeader">About Us</div><div class="popupContent"><article>Realy is not about Us, it's about me. it's not because I'm selfish, but nobody else contributed on this project.<br />Somethig about me: I'm come from south-west part of Slovakia. I moved to capital city in 2015. I have degree in Electrical Engineering and Informatics Technology. Now I'm most interested in IoT.</article></div></div>
-				<div class="contact popup" ><div class="popupHeader">Contact Us</div><div class="popupContent"><article>Be free and contact me on email:<contactFoRPi[at]gmail.com> <img src="img/myEmail.svg"></article></div></div>
+				<div class="contact popup" ><div class="popupHeader" >Contact Us <img src="img/close.png" /></div><div class="popupContent"><article>Be free and contact me on email:'<'contactFoRPi[at]gmail.com'>' <img src="img/myEmail.svg"><br /> 
+					<div class="contact_form">	
+						<form action="php/contactForm.php" method="post">
+							<fieldset>
+							<legend>Contact me:</legend>
+								<label>Subject:</label><input type="text" name="subject"  required="required" autofocus placeholder="Enter subject of your message!"></input> <br />	
+								<label>Email:</label><input type='email' name="email"  required="required" placeholder="Enter your email address!"></input><br />
+								<label>Message:</label><textarea type="text" name="message"  required="required" maxlength="550" row="50" placeholder="Enter your message. Maximum 550 letters."></textarea><br /> 
+								<input class="formButton" type="submit" value="Submit"></input><input class="formButton" type="reset" value="Reset">
+							</fieldset>
+						</form>
+					</div></article></div>
+				</div>
 				<div class="supportbrowsers">Support browsers:<div class="grayscale"><img src="img/firefox.png" alt="Firefox icon" /><img src="img/opera.png" alt="Opera icon" /><img src="img/chrome.png" alt="Chrome icon" /><img src="img/safari.png" alt="Safari icon" /></div>
 				<div class="copy">©2016  |  FoRPi</div>
 			</div>
