@@ -145,10 +145,41 @@ $(document).ready(function(){
 	$('#about').click(function(event){
     event.stopPropagation();
 	});
-	$('#contact').click(function(event){
-    event.stopPropagation();
-	});
 	
+	$("#contactForm").submit(function(){
+		clearErr();
+		$.ajax({
+			type:"post",
+			dataType:"json",
+			url:"php/contactForm.php",
+			data:$("#contactForm").serialize(),
+			success: function(response){
+				//$("#contactForm").(response);
+				console.log(response);
+				if(response.subjectError!=""){
+					$("#subjectError").html(response.subjectError);
+				}
+				if(response.emailError!=""){
+					$("#emailError").html(response.emailError);
+				}
+				if(response.messageError!=""){
+					$("#messageError").html(response.messageError);
+				}
+				if(response.generalError!=""){
+					$("#generalError").html(response.generalError);
+				}
+				if(response.success!=""){
+					$("#generalError").html(response.success);
+				}
+			}
+		});
+	});
+	function clearErr(){
+		$("#subjectError").html("");
+		$("#emailError").html("");
+		$("#messageError").html("");
+		$("#generalError").html("");
+	}
 	
 //-------------------------------fade out search---------------------------------------------
    $('#accordion input').on("change",function(){
