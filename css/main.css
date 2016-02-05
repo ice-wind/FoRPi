@@ -751,8 +751,8 @@ footer{
 	font-size:25;
 }
 .contact{
-	height:350px;
-	top:-70px;
+	height:450px;
+	top:-170px;
 }
 form{
 	margin:0 auto;
@@ -772,6 +772,17 @@ label+input,label+textarea{
 label+input:focus,label+textarea:focus{
 	border:2px solid #97d6eb;
 	background-color:#fff;
+}
+label+input:valid{
+    background:hsl(120, 50%, 90%);
+    border-color:hsl(120, 50%, 50%);
+}
+label+input:invalid{
+    border-color:hsl(0, 50%, 50%);
+    background:hsl(0, 50%, 90%);
+}
+#subjectError,#emailError,#messageError,#generalError{
+	color:red;
 }
 .formButton{
 	margin-top:20px;
@@ -904,13 +915,21 @@ table{
 /*-----------------END highchart-----------------*/
 
 /*-----------------------------------------MEDIA Resp--------------------------------------*/
-@media all and (max-width: 1400px) {
+@media (max-width: 1400px) {
 	.leftIcons{
 		width: 45px;
 		height: 45px;
   }
 }
-@media all and (max-width: 300px) {
+@media (max-width: 320px) {
+.side_menu_area{
+	display:none;
+ }
+}
+@media (max-width: 860px) {
+ .side_menu_area{
+	display:none;
+ }
  .row_base{
     -webkit-flex-direction: column;
 	flex-direction: column;
@@ -939,7 +958,7 @@ table{
 	display:block;
   }
   .left_menu{
-	max-width:300;
+	max-width:100%;
 	width:auto;
   }
 }
