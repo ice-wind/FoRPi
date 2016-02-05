@@ -169,6 +169,7 @@ $(document).ready(function(){
 					$("#generalError").html(response.generalError);
 				}
 				if(response.success!=""){
+					$("#generalError").attr('style','color:rgb(155, 240, 171)');
 					$("#generalError").html(response.success);
 				}
 			}

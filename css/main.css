@@ -915,13 +915,21 @@ table{
 /*-----------------END highchart-----------------*/
 
 /*-----------------------------------------MEDIA Resp--------------------------------------*/
-@media all and (max-width: 1400px) {
+@media (max-width: 1400px) {
 	.leftIcons{
 		width: 45px;
 		height: 45px;
   }
 }
-@media all and (max-width: 300px) {
+@media (max-width: 320px) {
+.side_menu_area{
+	display:none;
+ }
+}
+@media (max-width: 860px) {
+ .side_menu_area{
+	display:none;
+ }
  .row_base{
     -webkit-flex-direction: column;
 	flex-direction: column;
@@ -950,7 +958,7 @@ table{
 	display:block;
   }
   .left_menu{
-	max-width:300;
+	max-width:100%;
 	width:auto;
   }
 }
