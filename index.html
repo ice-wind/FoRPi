@@ -16,6 +16,7 @@
 	<script type="text/javascript" src="js/16day.js"></script>
 	<script type="text/javascript" src="js/RPi.js"></script>
 	<script type="text/javascript" src="js/controller.js"></script>
+	<script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
 Start
@@ -136,9 +137,10 @@ Start
 							<fieldset>
 							<legend>Contact me:</legend>
 								<label>Subject:</label><input type="text" name="subject"  required="required" autofocus placeholder="Enter subject of your message!" pattern="[A-Za-z-0-9]+" title="Just letters and numbers" /> <label id="subjectError"></label><br />	
-								<label>Email:</label><input type='email' name="email"  required="required" placeholder="Enter your email address!" title="@ . have to be included!" /><label id="emailError"></label><br />
+								<label>Email:</label><input type='email' name="email"  required="required" placeholder="Enter your email address!" title="[@] and [.] have to be included!" /><label id="emailError"></label><br />
 								<label>Message:</label><textarea class="contactTextarea" type="text" name="message"  required="required" maxlength="550" row="50" title="Maximum 550 letters"></textarea><label id="messageError"></label><br /> 
-								<button type="submit">Submit</button><button class="formButton" type="reset" >Reset</button>
+								<button type="submit" class="submit formButton"><span>Submit</span></button><button class="reset formButton" type="reset" ><span>Reset</span></button>
+								<div class="g-recaptcha" data-sitekey="6LdInRcTAAAAANJdCDkhESOwZAa_d6TZSFEuWI2_"></div>
 								<label id="generalError"></label>
 							</fieldset>
 						</form>

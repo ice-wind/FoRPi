@@ -1,8 +1,7 @@
-
 <?php
-
 	$subject=$email=$message="";
 	$error=$subjectError=$emailError=$messageError=$generalError="";
+	$secret="6LdInRcTAAAAAKbVYq_joBkF2z9lhr_fkHgMjw-I";
 	
 	
 	$to="contactforpi@gmail.com";
@@ -29,6 +28,16 @@
 			$messageError="Message is required!";
 		}else{
 			$message=test_input($_POST["message"]);
+		}
+		if(empty($_POST["g-recaptcha-response"])){
+			$generalError="You are robot!";
+		}else{
+			$captcha=($_POST["g-recaptcha-response"]);
+			$response=file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$secret."&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR']);
+			$decoded_response = json_decode($response);
+			if ($decoded_response->success){
+				$success="Email was send successfully";
+			}
 		}
 	}else{
 		echo $generalError="Error: method to send data is not POST!";

@@ -147,6 +147,7 @@ $(document).ready(function(){
 	});
 	
 	$("#contactForm").submit(function(){
+		console.log("start ajax");
 		clearErr();
 		$.ajax({
 			type:"post",
