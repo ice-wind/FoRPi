@@ -30,7 +30,7 @@
 			$message=test_input($_POST["message"]);
 		}
 		if(empty($_POST["g-recaptcha-response"])){
-			$generalError="You are robot!";
+			$generalError="Please use re-captcha for security reasons!";
 		}else{
 			$captcha=($_POST["g-recaptcha-response"]);
 			$response=file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$secret."&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR']);
