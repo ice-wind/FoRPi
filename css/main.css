@@ -116,7 +116,7 @@
 	-webkit-flex:5;
 	-o-flex:5;
 	order:2;
-	height:100%;
+	height:auto;
 	background-color: #F5F5F5;
 	overflow: hidden;
 	color:black;
