@@ -752,6 +752,9 @@ footer{
 	display:none;
 	font-size:25;
 }
+.about{
+	min-width:260px;
+}
 .contact{
 	max-height:480px;
 	min-height:410px;
