@@ -116,7 +116,7 @@
 	-webkit-flex:5;
 	-o-flex:5;
 	order:2;
-	height:100%;
+	height:auto;
 	background-color: #F5F5F5;
 	overflow: hidden;
 	color:black;
@@ -751,6 +751,9 @@ footer{
 	margin:auto;
 	display:none;
 	font-size:25;
+}
+.about{
+	min-width:260px;
 }
 .contact{
 	max-height:480px;
